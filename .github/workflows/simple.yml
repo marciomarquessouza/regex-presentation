@@ -1,0 +1,19 @@
+name: Shell Commands
+on:
+  - push
+jobs:
+  run-shell-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo a string
+        run: echo "Hello World!"
+      - name: Multiple Commands
+        run: |
+          node -v
+          npm -v
+      - name: Python Command
+        run: |
+          import platform
+          print
+          (platform.processor())
+        shell: python
